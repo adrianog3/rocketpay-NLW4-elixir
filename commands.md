@@ -21,4 +21,10 @@ mix phx.server
 
 # interactive elixir
 iex -S mix
+
+# create migration
+mix ecto.gen.migration create_user_table
+
+# execute migration
+mix ecto.migrate
 ```
