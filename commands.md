@@ -1,4 +1,4 @@
-# Step by step
+# Commands
 
 ```bash
 # Install mix CLI
@@ -27,4 +27,12 @@ mix ecto.gen.migration create_user_table
 
 # execute migration
 mix ecto.migrate
+```
+
+## Testing modules
+
+```elixir
+# iex -S mix
+params = %{name: "Adriano Souza", password: "123456", email: "adriano@domain.com", nickname: "adrianog3", age: 25}
+Rocketpay.Repo.all(Rocketpay.User) |> Rocketpay.Repo.preload(:account)
 ```
